@@ -1,0 +1,343 @@
+:root {
+  --background-color: rgb(255 233 211);
+}
+* {
+  box-sizing: border-box;
+  font-family: "Playfair Display", serif;
+  margin: 0;
+  padding: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+/* .container{
+}
+
+@media (min-width:430px) {
+    .container{
+        width: 420px;
+    }
+}
+
+@media (min-width:768px) {
+    .container{
+        width: 760px;
+    }
+}
+
+@media (min-width:1200px) {
+    .container{
+        width: 1190;
+    }
+} */
+
+/* compnents */
+section {
+  padding: 200px 150px;
+}
+.spical-head {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: -120px;
+  font-weight: 600;
+  font-size: 3em;
+  color: #fc7e00;
+}
+/* compnents */
+
+/* start nav bar */
+.navBar {
+  background-color: rgb(255 255 255);
+  width: 100%;
+  position: fixed;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 200px;
+  border-bottom: 2px solid #efae2e;
+}
+.navBar .logo {
+  color: rgb(212 114 17);
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 2em;
+  font-weight: 700;
+}
+.navBar .links a {
+  color: rgb(212 114 17);
+  margin-right: 30px;
+  list-style: none;
+  text-decoration: none;
+  font-size: 1.5em;
+  font-weight: 500;
+  transition: color 0.5s, margin-right 0.3s;
+}
+.navBar .links a:hover {
+  margin-right: 40px;
+  color: rgb(66, 49, 9);
+}
+
+/* end nav bar */
+
+/* start introduction */
+
+.main {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: url(../images/backgroundMain.png) no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.main .text {
+  line-height: 2;
+  color: #fbba79;
+  font-size: 1.1em;
+}
+.main .text h2 span {
+  color: #fc7e00;
+  font-size: 2em;
+  font-weight: 500;
+}
+.main .text h3 {
+  letter-spacing: 2px;
+}
+.main .text #project-btn {
+  background-color: #d47211;
+  border: 3px solid #4f2801;
+  border-radius: 30px;
+  color: #e9d0b7;
+  text-decoration: none;
+  font-size: 1.2em;
+  font-weight: 300;
+  padding: 0.3em;
+  margin: 20px 0px;
+  width: 200px;
+  text-align: center;
+  display: inline-block;
+  transition: 0.5s ease;
+}
+.main .text #project-btn:hover {
+  background-color: #653504;
+  margin-left: 10px;
+}
+.main .text .icons a {
+  color: #f7a85a;
+  font-size: 1.6em;
+  margin-left: 40px;
+  transition: color 0.3s, margin-left 0.5s;
+}
+.main .text .icons a:hover {
+  color: #ffcc99;
+  margin-left: 45px;
+}
+.main .image {
+  width: 400px;
+  height: 400px;
+  border: 10px solid #e27a1b;
+  border-radius: 300px;
+  z-index: 999;
+  position: relative;
+  overflow: hidden;
+  transition: 0.5s ease;
+}
+.main .image:hover {
+  border: 5px solid #a15813;
+}
+.main .image .position img {
+  width: 100%;
+  height: 100%;
+}
+.main .image .position {
+  position: absolute;
+  top: -30px;
+  transition: 0.5s ease;
+}
+.main .image .position:hover {
+  transform: scale(1.05);
+}
+/* end introduction */
+
+/* start services */
+#services {
+  background-color: var(--background-color);
+}
+.service {
+  /* display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+  text-align: center;
+  justify-content: center;
+  position: relative; */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.service .card {
+  border-radius: 20px;
+  box-shadow: 0px 5px 15px black;
+  background-color: white;
+  margin: 20px;
+  width: 21.5em;
+  padding: 30px;
+  transition: 0.5s ease;
+}
+.service .card:hover {
+  transform: scale(1.05);
+}
+.service .card .icon {
+  text-align: center;
+  font-size: 8em;
+  color: #ff5800;
+  padding: 0px;
+  display: block;
+}
+
+.service .card .info h2 {
+  text-align: center;
+  color: #b68626;
+  letter-spacing: 1px;
+  font-weight: 700;
+  font-size: 1.8em;
+  margin-top: 0px;
+}
+.service .card .info p {
+  font-weight: 500;
+  line-height: 1.3;
+  font-size: 1.2em;
+  margin-top: 20px;
+  text-align: left;
+  letter-spacing: 1px;
+}
+/* end services */
+
+/* start projects */
+#projects {
+  background-image: url(../images/Untitled9.png);
+  background-size: cover;
+  background-attachment: fixed;
+}
+#projects .cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  text-align: center;
+  justify-content: center;
+  /* display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center; */
+}
+#projects .card {
+  margin: 20px;
+  min-height: 14em;
+  border-radius: 10px;
+  background-color: white;
+  border: 1px solid white;
+  transition: 0.3s ease;
+}
+#projects .card:hover {
+  transform: scale(1.1);
+  border: none;
+  background-color: rgb(244, 244, 244);
+}
+
+#projects .card:hover .image {
+  opacity: 0.9;
+}
+
+#projects .card .image img {
+  height: 100%;
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+}
+#projects .card .info {
+  font-size: 1.1em;
+  padding: 0.7em 0.7em;
+}
+#projects .card .text {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  font-weight: 900;
+  margin-top: 5px;
+  overflow: auto;
+}
+#projects .card p {
+  text-align: left;
+  font-weight: 500;
+  color: gray;
+  font-family: auto;
+}
+#projects .card .text h3 {
+  color: #b68626;
+  /* font-weight: 500; */
+}
+
+#projects .card .text a {
+  text-decoration: none;
+  /* font-weight: 700; */
+  letter-spacing: 1px;
+  color: #ff5800;
+  transition: 0.3s ease;
+}
+#projects .card .text a:hover {
+  color: #6e2700;
+}
+/* end projects */
+
+/* start contact */
+#contact {
+  background-color: var(--background-color);
+  padding: 150px 100px;
+}
+
+#contact .card .icon {
+  font-size: 6em;
+}
+#contact .card .info p,
+#contact .card .info h2 {
+  margin-top: 5px;
+  text-align: center;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 1.5em;
+}
+#contact .card .info p a {
+  text-decoration: none;
+  color: #cc4600;
+}
+/* end contact */
+
+/* start footer */
+footer{
+  background-color: #e04d00;
+  font-size: 1.5em;
+  color: white;
+}
+footer .footer{
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0px 60px;
+}
+.footer p{
+  
+}
+.footer p span{
+  color: #3b0707;
+  
+}
+.footer .icons a{
+  color: white;
+  margin-left: 20px;
+}
+/* end footer */
